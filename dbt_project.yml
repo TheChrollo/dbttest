@@ -36,5 +36,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  eth_dbt_project:
-    +materialized: table
+  my_new_project:
+    core:
+      +materialized: view
+    staging:
+      +materialized: view
